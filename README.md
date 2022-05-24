@@ -1,24 +1,32 @@
-# README
+# How to Run
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* git clone git@github.com:notorious94/coding-test-by-leonika.git
+* cp .env.sample .env
+* rails db:create
+* rails db:migrate
+* rails db:seed
 
-Things you may want to cover:
+## Note 
+Use the curl command to run the api endpoints
 
-* Ruby version
+# API Endpoint
 
-* System dependencies
+To create a passenger:  http://localhost:3000/api/v1/users/create
 
-* Configuration
+### Parameters
+* name
+* gender
+* email
 
-* Database creation
 
-* Database initialization
+To get data of passenger on a specific day: http://localhost:3000/api/v1/users/per_day_passenger_count
+### Parameters
+* date
+* gender
+* page_no
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To get data of passenger on a specific datetime:  http://localhost:3000/api/v1/users/passenger_count_on_time
+### Parameters
+* datetime
+* gender
+* page_no
